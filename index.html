@@ -12,18 +12,14 @@
 <meta property="og:image" content="https://zhuoyihang.github.io/jishanhai-xiaoshan/%E5%9B%B4%E6%8C%A11.png">
 <meta property="og:url" content="https://zhuoyihang.github.io/jishanhai-xiaoshan/">
 <meta property="og:type" content="website">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-  :root { --blue: #2E75B6; --dark: #1A1A2E; --red: #C62828; --green: #27AE60; --orange: #E67E22; --bg: #F8F6F2; --purple: #8E24AA; --gray: #888888; }
+  :root { --blue: #2E75B6; --dark: #1A1A2E; --red: #C62828; --green: #27AE60; --orange: #E67E22; --bg: #F8F6F2; --purple: #8E24AA; --gray: #888; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:#333; line-height:1.8; }
   .container { max-width:1000px; margin:0 auto; padding:20px; }
-  .tabs { display:flex; gap:0; margin-bottom:0; position:sticky; top:0; z-index:100; background:var(--bg); padding-top:12px; flex-wrap:wrap; }
-  .tab-btn { flex:1; min-width:80px; padding:14px 4px; border:none; background:#fff; cursor:pointer; font-size:12px; font-weight:600; color:#888; border-bottom:3px solid transparent; transition:all .2s; text-align:center; border-radius:8px 8px 0 0; margin:0 1px; }
-  .tab-btn:hover { color:var(--blue); background:#f0f4f8; }
-  .tab-btn.active { color:var(--blue); border-bottom-color:var(--blue); background:#fff; }
-  .tab-content { display:block; }
-  .tab-content.hidden { display:none; }
   .cover { background:linear-gradient(135deg,#1a1a2e 0%,#2d3748 50%,#1a3a2a 100%); color:#fff; text-align:center; padding:50px 30px; border-radius:12px; margin-bottom:24px; }
   .cover h1 { font-size:30px; font-weight:700; letter-spacing:3px; }
   .cover .sub { font-size:15px; color:rgba(255,255,255,.7); margin-top:6px; }
@@ -33,12 +29,12 @@
   .section h2 { font-size:20px; color:var(--dark); margin-bottom:18px; padding-bottom:10px; border-bottom:2px solid var(--blue); display:flex; align-items:center; gap:10px; }
   .section h3 { font-size:16px; color:var(--blue); margin:16px 0 10px; }
   .num { background:var(--blue); color:#fff; width:28px; height:28px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; flex-shrink:0; }
+  .divider { text-align:center; padding:12px 0; color:var(--blue); font-size:18px; letter-spacing:6px; }
   table { width:100%; border-collapse:collapse; margin:12px 0; font-size:13px; }
   th { background:var(--blue); color:#fff; padding:10px 14px; text-align:left; font-weight:600; font-size:12px; white-space:nowrap; }
   td { padding:8px 14px; border-bottom:1px solid #eee; }
   tr:nth-child(even) td { background:#fafafa; }
   .hl td { background:#e8f4f8!important; font-weight:600; }
-  .gray-text { color:var(--gray); font-size:12px; }
   .gray-box { background:#f5f5f5; border-left:4px solid #ccc; padding:14px 18px; margin:12px 0; border-radius:8px; }
   .gray-box h4 { color:#666; font-size:14px; margin-bottom:8px; }
   .gray-box p { color:var(--gray); font-size:12px; }
@@ -50,7 +46,6 @@
   .card.purple { border-left-color:var(--purple); }
   .card h4 { font-size:14px; margin-bottom:6px; }
   .card p,.card li { font-size:12px; color:#666; }
-  .card ul { padding-left:16px; margin-top:4px; }
   .alert { padding:14px 18px; border-radius:8px; margin:12px 0; font-size:13px; }
   .alert-i { background:#e8f4f8; border-left:4px solid var(--blue); }
   .alert-w { background:#fef9e7; border-left:4px solid var(--orange); }
@@ -78,38 +73,30 @@
   .content-card .note-body { font-size:12px; color:#555; }
   .img-row { display:flex; gap:10px; margin:16px 0; justify-content:center; }
   .img-row img { width:30%; border-radius:8px; object-fit:cover; }
-  @media (max-width:768px) { .section { padding:20px 16px; } .cards { grid-template-columns:1fr; } .content-grid { grid-template-columns:1fr; } .cover h1 { font-size:22px; } .tab-btn { font-size:11px; padding:10px 2px; } .img-row { flex-direction:column; } .img-row img { width:100%; } }
   .watermark { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; overflow:hidden; }
   .watermark span { position:absolute; font-size:14px; color:rgba(0,0,0,0.04); white-space:nowrap; transform:rotate(-30deg); user-select:none; }
+  @media (max-width:768px) { .section { padding:20px 16px; } .cards { grid-template-columns:1fr; } .content-grid { grid-template-columns:1fr; } .cover h1 { font-size:22px; } .img-row { flex-direction:column; } .img-row img { width:100%; } }
 </style>
 </head>
 <body>
 <div class="watermark" id="wm"></div>
 <div class="container">
-
 <div class="cover">
   <h1>既山海 · 萧山万象汇店</h1>
   <div class="sub">开业整合营销全案 · 围挡启动 + 素人分层铺量 + 大众点评12项营销 + 首席品鉴官周小栀 · 一点万象联动</div>
   <div class="badge-row">
     <span class="c-badge">围挡预热期</span>
-    <span class="c-badge">小红书120条素人SEO</span>
-    <span class="c-badge">一点万象 · 买一送一</span>
+    <span class="c-badge">小红书120条SEO</span>
+    <span class="c-badge">大众点评12项</span>
+    <span class="c-badge">一点万象联动</span>
   </div>
 </div>
 
-<div class="tabs">
-  <button class="tab-btn active" onclick="switchTab(event,'tab-all')">全案总览</button>
-  <button class="tab-btn" onclick="switchTab(event,'tab-hoarding')">围挡营销</button>
-  <button class="tab-btn" onclick="switchTab(event,'tab-xhs')">小红书·120条</button>
-  <button class="tab-btn" onclick="switchTab(event,'tab-platform')">平台执行</button>
-  <button class="tab-btn" onclick="switchTab(event,'tab-free')">免费菜活动</button>
-  <button class="tab-btn" onclick="switchTab(event,'tab-budget')">预算总表</button>
-</div>
+<!-- ==================== 一、全案总览 ==================== -->
+<div class="divider">━━━ 一、全案总览 ━━━</div>
 
-<!-- ===== TAB: ALL ===== -->
-<div id="tab-all" class="tab-content active">
 <div class="section">
-  <h2><span class="num">1</span>全案总览</h2>
+  <h2><span class="num">1</span>基本信息</h2>
   <table>
     <tr><td style="width:140px;font-weight:600">品牌</td><td>既山海——东方山野茶</td></tr>
     <tr><td style="font-weight:600">门店</td><td>萧山万象汇L1层（杭州首店）</td></tr>
@@ -117,10 +104,10 @@
     <tr><td style="font-weight:600">同层竞品(L1)</td><td>霸王茶姬、树夏</td></tr>
     <tr><td style="font-weight:600">其他楼层竞品</td><td>喜茶(B1)、1点点L5(新店)、奈雪的茶(B1)、古茗(B1)、茉莉奶白(B1)</td></tr>
     <tr><td style="font-weight:600">总预算</td><td><strong>¥130,000</strong>（抖音17,000 + 小红书30,000 + 大众点评42,880 + 首席品鉴官32,920 + 运营机动7,200）</td></tr>
+    <tr><td style="font-weight:600">首席品鉴官</td><td><strong>周小栀（全网1000万粉）</strong>——定制杭州首店宣传片，电影级画面质感，曾合作携程/人民日报/多地文旅</td></tr>
     <tr><td style="font-weight:600">小红书策略</td><td>120条素人分层铺量（围挡40千粉 + 饮品40千粉/万粉 + 颜值40千粉/万粉），SEO搜索占位，不投流</td></tr>
     <tr><td style="font-weight:600">预热期</td><td>围挡营销——门店装修期围挡=品牌首秀，「拍围挡发小红书@官方→开业免费领醒山时茶」</td></tr>
     <tr><td style="font-weight:600">商场联动</td><td>一点万象小程序——华润体系万象汇自有平台</td></tr>
-    <tr><td style="font-weight:600">首席品鉴官</td><td><strong>周小栀（全网1000万粉）</strong>——定制杭州首店宣传片，电影级画面质感，曾合作携程/人民日报/多地文旅</td></tr>
     <tr><td style="font-weight:600">跨平台促销</td><td>买一送一——一点万象+抖音+美团三端同步，开业首周7天</td></tr>
     <tr><td style="font-weight:600">免费菜活动</td><td>打卡兑换醒山时茶(300份/日限10杯) + 收藏送礼(LV1-5冰箱贴/V6-8签字笔)，第一期45天</td></tr>
   </table>
@@ -136,25 +123,19 @@
   </div>
 </div>
 
-<div class="section">
-  <h2><span class="num">3</span>补充说明</h2>
-  <div class="gray-box">
-    <h4>📌 私域（企微）—— 建议项</h4>
-    <p>品牌刚起步，基础建设未完善前，建议暂不铺设企微私域重运营。待门店运营稳定后（D+90），由省代评估是否启动企业微信「白领拼单群」。前期以大众点评收藏+小红书UGC为主要用户沉淀方式。</p>
-  </div>
-</div>
-</div><!-- /tab-all -->
+<div class="gray-box"><h4>📌 私域（企微）—— 建议项</h4><p>品牌刚起步，基础建设未完善前，建议暂不铺设企微私域重运营。待门店运营稳定后（D+90），由省代评估是否启动。</p></div>
 
-<!-- ===== TAB: HOARDING ===== -->
-<div id="tab-hoarding" class="tab-content hidden">
+<!-- ==================== 二、围挡营销 ==================== -->
+<div class="divider">━━━ 二、围挡营销 ━━━</div>
+
 <div class="section">
   <h2><span class="num">1</span>围挡营销总览</h2>
-  <div class="alert alert-p"><strong>核心逻辑：</strong>万象汇L1层步行街门店围挡期（装修期间）是品牌的「被动曝光黄金期」——每天成百上千人路过。把围挡从施工遮蔽物变成品牌首秀阵地，用「免费喝茶」钩子把路人转化为小红书发布者。</div>
+  <div class="alert alert-p"><strong>核心逻辑：</strong>万象汇L1层步行街门店围挡期每天成百上千人路过。把围挡从施工遮蔽物变成品牌首秀阵地，用「免费喝茶」钩子把路人转化为小红书发布者。</div>
   <table>
     <tr><td style="width:150px;font-weight:600">围挡周期</td><td>开业前30天至开业日（约4-5周）</td></tr>
     <tr><td style="font-weight:600">围挡位置</td><td>既山海L1层门店正面围挡</td></tr>
     <tr><td style="font-weight:600">围挡设计</td><td>水墨山水主视觉 + 「山海将至」品牌预告 + QR码（跳转小红书品牌号/免费茶活动页）</td></tr>
-    <tr><td style="font-weight:600">核心活动</td><td><strong>「拍围挡·领山茶」</strong>——拍围挡照片/视频发小红书，带话题 @既山海官方，开业后凭发布截图到店免费领取醒山时茶（木姜子风味）1杯</td></tr>
+    <tr><td style="font-weight:600">核心活动</td><td><strong>「拍围挡·领山茶」</strong>——拍围挡发小红书，带话题 @既山海官方，开业后凭发布截图到店免费领取醒山时茶（木姜子风味）1杯</td></tr>
     <tr><td style="font-weight:600">物料预算</td><td>3,000元（计入成本）</td></tr>
   </table>
 </div>
@@ -166,24 +147,23 @@
     <img src="围挡2.png" alt="围挡案例2">
     <img src="围挡3.png" alt="围挡案例3">
   </div>
-  <div class="alert alert-i">参考案例：冬星沏1000杯免费送、莫大川打卡有礼、新秀炸鸡打卡领开业礼。既山海围挡采用水墨山水风格，配合「拍围挡@官方领醒山时茶」活动。</div>
 </div>
 
 <div class="section">
   <h2><span class="num">3</span>围挡期·第一批40条千粉笔记Brief</h2>
   <div class="content-grid">
-    <div class="content-card"><h5>📌 A:围挡打卡（20条）</h5><p class="note-title">标题：</p><p class="note-body">「万象汇L1层围了个山水画」「路过万象汇被这个围挡吸引了」「萧山万象汇L1又有新店了」</p><p class="note-title">内容：</p><p class="note-body">围挡正面/侧面实拍≥4张，有人物入镜最佳。文案60-120字，突出「好奇」「期待」</p></div>
-    <div class="content-card"><h5>📌 B:品类种草（12条）</h5><p class="note-title">标题：</p><p class="note-body">「杭州终于要有山野茶了」「主打山野茶系列的店 码住」「萧山茶饮新选手入驻万象汇L1」</p><p class="note-title">内容：</p><p class="note-body">围挡+品牌信息截图拼贴。文案80-150字「科普式」分享</p></div>
-    <div class="content-card"><h5>📌 C:免费茶钩子（8条）</h5><p class="note-title">标题：</p><p class="note-body">「拍围挡居然能免费喝茶」「发了这个围挡 坐等开业领茶」「万象汇L1新店开业前就送福利」</p><p class="note-title">内容：</p><p class="note-body">围挡+QR码特写。文案50-80字省流版参与指南</p></div>
+    <div class="content-card"><h5>A:围挡打卡（20条）</h5><p class="note-title">标题：</p><p class="note-body">「万象汇L1层围了个山水画」「路过万象汇被这个围挡吸引了」「萧山万象汇L1又有新店了」</p><p class="note-title">内容：</p><p class="note-body">围挡正面/侧面实拍≥4张，有人物入镜最佳。文案60-120字，突出「好奇」「期待」</p></div>
+    <div class="content-card"><h5>B:品类种草（12条）</h5><p class="note-title">标题：</p><p class="note-body">「杭州终于要有山野茶了」「主打山野茶系列的店 码住」「萧山茶饮新选手入驻万象汇L1」</p><p class="note-title">内容：</p><p class="note-body">围挡+品牌信息截图拼贴。文案80-150字「科普式」分享</p></div>
+    <div class="content-card"><h5>C:免费茶钩子（8条）</h5><p class="note-title">标题：</p><p class="note-body">「拍围挡居然能免费喝茶」「发了这个围挡 坐等开业领茶」「万象汇L1新店开业前就送福利」</p><p class="note-title">内容：</p><p class="note-body">围挡+QR码特写。文案50-80字省流版参与指南</p></div>
   </div>
 </div>
-</div><!-- /tab-hoarding -->
 
-<!-- ===== TAB: XHS ===== -->
-<div id="tab-xhs" class="tab-content hidden">
+<!-- ==================== 三、小红书 ==================== -->
+<div class="divider">━━━ 三、小红书 · 120条素人铺量 ━━━</div>
+
 <div class="section">
-  <h2><span class="num">1</span>小红书总策略——SEO搜索占位</h2>
-  <div class="alert alert-p"><strong>策略：</strong>杭州首店，品牌0认知。120条素人笔记分三层铺量，不做内容放大，做<strong>搜索密度</strong>。当杭州消费者搜索「万象汇奶茶」「萧山新店」「杭州茶饮推荐」时，既山海的名字反复出现。</div>
+  <h2><span class="num">1</span>SEO搜索占位策略</h2>
+  <div class="alert alert-p"><strong>策略：</strong>杭州首店，品牌0认知。120条素人笔记分三层铺量，不做内容放大，做<strong>搜索密度</strong>。</div>
   <div class="cards">
     <div class="card purple"><h4>博主分层</h4><p><strong>千粉(1K-2K)</strong>：保量铺搜索密度，90条，100元/条<br><strong>万粉(1W-2W)</strong>：保内容质量，30条，250元/条</p></div>
     <div class="card"><h4>发布节奏</h4><p>围挡期40条(开业前4周) → 饮品40条(开业前后两周) → 颜值40条(开业后)</p></div>
@@ -194,46 +174,45 @@
 <div class="section">
   <h2><span class="num">2</span>第二批·饮品测评（40条：25千粉 + 15万粉）</h2>
   <div class="content-grid">
-    <div class="content-card"><h5>① 醒山时茶测评（16条：10千+6万）</h5><p class="note-title">标题：</p><p class="note-body">「我终于喝到了木姜子味的茶」「万象汇这杯醒山时茶有点东西」「杭州第一杯木姜子茶」</p><p class="note-title">内容：</p><p class="note-body">饮品特写+杯身+门店1-2张。100-200字真实口感，突出木姜子独特性。<strong>万粉号多图+深度描述</strong></p></div>
-    <div class="content-card"><h5>② 七大系列山野茶实测（12条：8千+4万）</h5><p class="note-title">标题：</p><p class="note-body">「既山海七大系列实测」「万象汇L1山野茶系列全测评」「山野茶系列哪杯最好喝」</p><p class="note-title">内容：</p><p class="note-body">随机选择七大系列中的产品进行实测。万粉号产出对比向深度内容</p></div>
-    <div class="content-card"><h5>③ 性价比薅羊毛（12条：7千+5万）</h5><p class="note-title">标题：</p><p class="note-body">「万象汇19.9喝山野限定」「打卡就送一杯 羊毛薅起来」「万象汇L1新店买一送一」</p><p class="note-title">内容：</p><p class="note-body">饮品+打卡截图/团购截图。性价比向附价格和福利获取方式</p></div>
+    <div class="content-card"><h5>① 醒山时茶测评（16条）</h5><p class="note-title">标题：</p><p class="note-body">「我终于喝到了木姜子味的茶」「万象汇这杯醒山时茶有点东西」「杭州第一杯木姜子茶」</p><p class="note-title">内容：</p><p class="note-body">饮品特写+杯身+门店。100-200字真实口感，突出木姜子独特性。<strong>万粉号多图+深度描述</strong></p></div>
+    <div class="content-card"><h5>② 七大系列山野茶实测（12条）</h5><p class="note-title">标题：</p><p class="note-body">「既山海七大系列实测」「万象汇L1山野茶系列全测评」「山野茶系列哪杯最好喝」</p><p class="note-title">内容：</p><p class="note-body">随机选择七大系列产品实测。万粉号产出对比向深度内容</p></div>
+    <div class="content-card"><h5>③ 性价比薅羊毛（12条）</h5><p class="note-title">标题：</p><p class="note-body">「万象汇19.9喝山野限定」「打卡就送一杯 羊毛薅起来」「万象汇L1新店买一送一」</p><p class="note-title">内容：</p><p class="note-body">饮品+打卡截图/团购截图。性价比向附价格和福利获取方式</p></div>
   </div>
 </div>
 
 <div class="section">
   <h2><span class="num">3</span>第三批·颜值穿搭氛围（40条：25千粉 + 15万粉）</h2>
   <div class="content-grid">
-    <div class="content-card"><h5>① 门店氛围打卡（16条：10千+6万）</h5><p class="note-title">标题：</p><p class="note-body">「万象汇L1这家新茶饮拍照太出片了」「水墨风茶饮店 杭州终于有了」「秋冬氛围感拿捏 万象汇既山海」</p><p class="note-title">内容：</p><p class="note-body">门店空间≥5张，有人物出镜。80-120字强调水墨山水拍照体验。<strong>万粉号产出空间探店长文</strong></p></div>
-    <div class="content-card"><h5>② 万象汇逛街探店（14条：9千+5万）</h5><p class="note-title">标题：</p><p class="note-body">「逛万象汇发现了家宝藏茶饮」「万象汇L1新店速递 路过被水墨风吸引」「万象汇L1下午茶 这杯山野茶好治愈」</p><p class="note-title">内容：</p><p class="note-body">万象汇逛街场景+门店+饮品多图拼贴。以逛街为主叙事线</p></div>
-    <div class="content-card"><h5>③ 穿搭+饮品（10条：6千+4万）</h5><p class="note-title">标题：</p><p class="note-body">「今日万象汇OOTD 顺便喝了杯山野茶」「秋冬万象汇穿搭+新店探店」</p><p class="note-title">内容：</p><p class="note-body">穿搭照+饮品手持+门店环境。穿搭为主线，既山海为画面元素</p></div>
+    <div class="content-card"><h5>① 门店氛围打卡（16条）</h5><p class="note-title">标题：</p><p class="note-body">「万象汇L1这家新茶饮拍照太出片了」「水墨风茶饮店 杭州终于有了」</p><p class="note-title">内容：</p><p class="note-body">门店空间≥5张，有人物出镜。80-120字强调水墨山水拍照体验</p></div>
+    <div class="content-card"><h5>② 万象汇逛街探店（14条）</h5><p class="note-title">标题：</p><p class="note-body">「逛万象汇发现了家宝藏茶饮」「万象汇L1下午茶 这杯山野茶好治愈」</p><p class="note-title">内容：</p><p class="note-body">万象汇逛街场景+门店+饮品多图拼贴。以逛街为主叙事线</p></div>
+    <div class="content-card"><h5>③ 穿搭+饮品（10条）</h5><p class="note-title">标题：</p><p class="note-body">「今日万象汇OOTD 顺便喝了杯山野茶」「秋冬万象汇穿搭+新店探店」</p><p class="note-title">内容：</p><p class="note-body">穿搭照+饮品手持+门店环境。穿搭为主线，既山海为画面元素</p></div>
   </div>
 </div>
-</div><!-- /tab-xhs -->
 
-<!-- ===== TAB: PLATFORM ===== -->
-<div id="tab-platform" class="tab-content hidden">
+<!-- ==================== 四、平台执行 ==================== -->
+<div class="divider">━━━ 四、平台执行 ━━━</div>
+
 <div class="section">
   <h2><span class="num">1</span>抖音执行方案（¥17,000）</h2>
   <table>
-    <tr><th style="width:90px">项目</th><th>内容</th><th style="width:80px">数量</th><th>备注</th></tr>
+    <tr><th>项目</th><th>内容</th><th>数量</th><th>备注</th></tr>
     <tr><td style="font-weight:600">同城探店达人</td><td>实际到店拍摄+发布，挂载买一送一团购链接</td><td>30个</td><td></td></tr>
     <tr><td style="font-weight:600">云剪辑内容</td><td>提供素材由达人剪辑发布，不同步三平台</td><td>200条</td><td>¥7,000</td></tr>
-    <tr style="background:#E8F5E9"><td style="font-weight:600" colspan="2">[赠] 达人笔记同步三平台（红书/抖音/点评）</td><td>200元/篇</td><td>赠送 ¥6,000价值</td></tr>
-    <tr style="background:#E8F5E9"><td style="font-weight:600" colspan="2">[赠] 博主无水印摄影照片</td><td>500元/套</td><td>赠送</td></tr>
-    <tr style="background:#E8F5E9"><td style="font-weight:600" colspan="2">[赠] 专业策划推广营销方案</td><td>2000元/次</td><td>赠送</td></tr>
+    <tr style="background:#E8F5E9"><td style="font-weight:600" colspan="2">[赠] 达人笔记同步三平台（红书/抖音/点评）</td><td>200元/篇</td><td>¥6,000价值</td></tr>
+    <tr style="background:#E8F5E9"><td style="font-weight:600" colspan="2">[赠] 博主无水印摄影照片</td><td>500元/套</td><td></td></tr>
+    <tr style="background:#E8F5E9"><td style="font-weight:600" colspan="2">[赠] 专业策划推广营销方案</td><td>2000元/次</td><td></td></tr>
     <tr class="hl"><td colspan="2" style="text-align:right">抖音合计</td><td colspan="2"><strong>¥17,000</strong></td></tr>
   </table>
 </div>
 
 <div class="section">
-  <h2><span class="num">2</span>新美大执行方案（¥42,880）</h2>
-
-  <h3 style="color:var(--blue)">A. 大众点评笔记营销 ¥40,000</h3>
+  <h2><span class="num">2</span>大众点评执行方案（¥42,880）</h2>
+  <h3 style="color:var(--blue)">A. 笔记营销 ¥40,000</h3>
   <table>
     <tr><th style="width:30px">#</th><th>项目</th><th style="width:80px">金额</th><th>说明</th></tr>
     <tr><td>1</td><td>30位专业点星笔记挂门店POI</td><td>¥15,000</td><td></td></tr>
-    <tr><td>2</td><td>活动主话题页-优选笔记露出+主会场品牌墙植入</td><td>¥1,000</td><td></td></tr>
-    <tr><td>3</td><td>拼好单攻略笔记露出+主会场H5商家专属攻略引流</td><td>¥3,000</td><td></td></tr>
+    <tr><td>2</td><td>活动主话题页-优选笔记露出+主会场品牌墙</td><td>¥1,000</td><td></td></tr>
+    <tr><td>3</td><td>拼好单攻略笔记露出+主会场H5引流</td><td>¥3,000</td><td></td></tr>
     <tr><td>4</td><td>垂类作者20位笔记</td><td>¥5,000</td><td></td></tr>
     <tr><td>5</td><td>神秘盒子定制露出-评论任务掉落福利</td><td>¥1,000</td><td></td></tr>
     <tr><td>6</td><td>品牌专属出片点引流</td><td>¥1,000</td><td></td></tr>
@@ -245,12 +224,12 @@
     <tr style="background:#E8F5E9"><td>12</td><td>[赠] 点星万人社群宣发</td><td>¥0</td><td>宣传商家合作活动</td></tr>
     <tr class="hl"><td colspan="2" style="text-align:right">笔记营销合计</td><td><strong>¥40,000</strong></td><td></td></tr>
   </table>
-
   <h3 style="color:var(--green);margin-top:16px">B. 商户通 ¥2,880</h3>
   <table>
     <tr><th>项目</th><th style="width:80px">金额</th><th>说明</th></tr>
     <tr><td>商户通轻快餐</td><td>¥2,880</td><td>基础装修+团购上线</td></tr>
   </table>
+</div>
 
 <div class="section">
   <h2><span class="num">3</span>一点万象小程序 · 买一送一</h2>
@@ -265,10 +244,10 @@
   </table>
   <div class="alert alert-w">一点万象审核未通过的情况下，买一送一仍在抖音+美团双端独立执行。</div>
 </div>
-</div><!-- /tab-platform -->
 
-<!-- ===== TAB: FREE ===== -->
-<div id="tab-free" class="tab-content hidden">
+<!-- ==================== 五、免费菜活动 ==================== -->
+<div class="divider">━━━ 五、免费菜活动 ━━━</div>
+
 <div class="section">
   <h2><span class="num">1</span>免费菜活动（独立成本项）</h2>
   <table>
@@ -284,6 +263,7 @@
   </table>
   <div class="alert alert-d"><strong>⚠️ 三不原则：</strong>不挂钩免费菜与评价 · 不要求写什么/拍什么 · 不催促不追问</div>
 </div>
+
 <div class="section">
   <h2><span class="num">2</span>三个「送茶」活动区分</h2>
   <table>
@@ -293,10 +273,10 @@
     <tr style="background:#FCE4EC"><td>免费菜·打卡兑换</td><td>大众点评</td><td>打卡→领醒山时茶</td><td>45天(工作日)</td></tr>
   </table>
 </div>
-</div><!-- /tab-free -->
 
-<!-- ===== TAB: BUDGET ===== -->
-<div id="tab-budget" class="tab-content hidden">
+<!-- ==================== 六、预算总表 ==================== -->
+<div class="divider">━━━ 六、预算总表 ━━━</div>
+
 <div class="section">
   <h2><span class="num">1</span>营销预算总表（¥130,000）</h2>
 
@@ -313,33 +293,33 @@
 
   <h3 style="color:var(--purple);margin-top:24px">二、小红书 ¥30,000</h3>
   <table>
-    <tr><th>项目</th><th style="width:100px">实付价</th><th style="width:100px">原价</th><th>说明</th></tr>
+    <tr><th>项目</th><th style="width:90px">实付价</th><th style="width:90px">原价</th><th>说明</th></tr>
     <tr><td>素人分层笔记（120条）</td><td>¥30,000</td><td>—</td><td>围挡40千粉+饮品25千粉+15万粉+颜值25千粉+15万粉</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 达人笔记同步三平台</td><td>¥0</td><td>¥200/篇</td><td>赠送项：120篇×200=¥24,000价值</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 博主无水印摄影照片</td><td>¥0</td><td>¥500/套</td><td>赠送项：品牌素材留存</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 专业策划推广营销方案</td><td>¥0</td><td>¥2,000/次</td><td>赠送项：策略咨询</td></tr>
-    <tr class="hl"><td colspan="2" style="text-align:right"><strong>小红书合计（实付）</strong></td><td><strong>¥30,000</strong></td><td>赠送价值 ¥26,500</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 达人笔记同步三平台</td><td>¥0</td><td>¥200/篇</td><td>120篇×200=¥24,000</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 博主无水印摄影照片</td><td>¥0</td><td>¥500/套</td><td>品牌素材留存</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 专业策划推广营销方案</td><td>¥0</td><td>¥2,000/次</td><td>策略咨询</td></tr>
+    <tr class="hl"><td colspan="2" style="text-align:right"><strong>小红书合计（实付）</strong></td><td><strong>¥30,000</strong></td><td>赠送 ¥26,500</td></tr>
   </table>
 
   <h3 style="color:var(--blue);margin-top:24px">三、大众点评笔记营销 ¥40,000</h3>
   <table>
-    <tr><th style="width:40px">#</th><th>项目</th><th style="width:90px">实付价</th><th style="width:90px">原价</th><th>说明</th></tr>
-    <tr><td>1</td><td>30位专业点星笔记挂门店POI</td><td>¥15,000</td><td>—</td><td>高质量店铺笔记，直接挂载门店页面</td></tr>
-    <tr><td>2</td><td>活动主话题页-优选笔记露出+主会场品牌墙</td><td>¥1,000</td><td>—</td><td>品牌墙植入+优选笔记置顶</td></tr>
-    <tr><td>3</td><td>拼好单攻略笔记露出+主会场H5引流</td><td>¥3,000</td><td>—</td><td>商家专属攻略引流板块</td></tr>
-    <tr><td>4</td><td>垂类作者20位笔记</td><td>¥5,000</td><td>—</td><td>垂直领域达人内容</td></tr>
-    <tr><td>5</td><td>神秘盒子定制露出-评论任务</td><td>¥1,000</td><td>—</td><td>品牌商单笔记评论互动+福利掉落</td></tr>
+    <tr><th style="width:30px">#</th><th>项目</th><th style="width:90px">实付价</th><th style="width:90px">原价</th><th>说明</th></tr>
+    <tr><td>1</td><td>30位点星笔记挂门店POI</td><td>¥15,000</td><td>—</td><td></td></tr>
+    <tr><td>2</td><td>活动主话题页-优选笔记+品牌墙</td><td>¥1,000</td><td>—</td><td></td></tr>
+    <tr><td>3</td><td>拼好单攻略笔记+主会场H5引流</td><td>¥3,000</td><td>—</td><td></td></tr>
+    <tr><td>4</td><td>垂类作者20位笔记</td><td>¥5,000</td><td>—</td><td></td></tr>
+    <tr><td>5</td><td>神秘盒子定制露出-评论任务</td><td>¥1,000</td><td>—</td><td></td></tr>
     <tr><td>6</td><td>品牌专属出片点引流</td><td>¥1,000</td><td>—</td><td></td></tr>
-    <tr><td>7</td><td>点星专展笔记搜索组件</td><td>¥1,200</td><td>¥1,000</td><td>品牌专属搜索引流词配置</td></tr>
-    <tr><td>8</td><td>商家专属话题页</td><td>¥2,800</td><td>—</td><td>商家专属营销引流话题页</td></tr>
-    <tr style="background:#E8F5E9"><td>9</td><td>[赠] 官方活动笔记品牌露出</td><td>¥0</td><td>¥1,000</td><td>点小福官号专属发文，活动期在线</td></tr>
-    <tr style="background:#E8F5E9"><td>10</td><td>[赠] 定制化热点内容策划</td><td>¥0</td><td>¥1,000</td><td>品类集合热点提报（不保证名次）</td></tr>
+    <tr><td>7</td><td>点星专展笔记搜索组件</td><td>¥1,200</td><td>¥1,000</td><td>品牌专属搜索引流词</td></tr>
+    <tr><td>8</td><td>商家专属话题页</td><td>¥2,800</td><td>—</td><td></td></tr>
+    <tr style="background:#E8F5E9"><td>9</td><td>[赠] 官方活动笔记品牌露出</td><td>¥0</td><td>¥1,000</td><td>点小福官号</td></tr>
+    <tr style="background:#E8F5E9"><td>10</td><td>[赠] 定制化热点内容策划</td><td>¥0</td><td>¥1,000</td><td>品类热点提报</td></tr>
     <tr><td>11</td><td>流量充值</td><td>¥10,000</td><td>—</td><td></td></tr>
-    <tr style="background:#E8F5E9"><td>12</td><td>[赠] 点星万人社群宣发</td><td>¥0</td><td>¥1,000</td><td>宣传商家合作活动与优质笔记</td></tr>
-    <tr class="hl"><td colspan="3" style="text-align:right"><strong>大众点评笔记营销合计（实付）</strong></td><td><strong>¥40,000</strong></td><td>赠送价值 ¥3,000</td></tr>
+    <tr style="background:#E8F5E9"><td>12</td><td>[赠] 点星万人社群宣发</td><td>¥0</td><td>¥1,000</td><td></td></tr>
+    <tr class="hl"><td colspan="3" style="text-align:right"><strong>笔记营销合计（实付）</strong></td><td><strong>¥40,000</strong></td><td>赠送 ¥3,000</td></tr>
   </table>
 
-  <h3 style="color:var(--green);margin-top:24px">四、大众点评商户通 ¥2,880</h3>
+  <h3 style="color:var(--green);margin-top:24px">四、商户通 ¥2,880</h3>
   <table>
     <tr><th>项目</th><th style="width:100px">金额</th><th>说明</th></tr>
     <tr><td>商户通轻快餐</td><td>¥2,880</td><td>基础装修+团购上线</td></tr>
@@ -348,28 +328,31 @@
   <h3 style="color:var(--red);margin-top:24px">五、首席品鉴官 · 周小栀 ¥32,920</h3>
   <table>
     <tr><th>项目</th><th style="width:100px">金额</th><th>说明</th></tr>
-    <tr><td>定制杭州首店宣传片</td><td>¥32,920</td><td>含机票住宿等差旅及个税，无额外费用</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 全网1000万粉曝光加持</td><td>¥0</td><td>抖音+全平台同步发布，赠送</td></tr>
+    <tr><td>定制杭州首店宣传片</td><td>¥32,920</td><td>含机票住宿差旅及个税，无额外费用</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 全网1000万粉曝光加持</td><td>¥0</td><td>抖音+全平台同步发布</td></tr>
     <tr class="hl"><td style="text-align:right"><strong>首席品鉴官合计</strong></td><td><strong>¥32,920</strong></td><td></td></tr>
   </table>
 </div>
 
 <div class="section">
-  <h2><span class="num">2</span>预算汇总</h2>
+  <h2><span class="num">2</span>预算汇总（报价 vs 实付）</h2>
   <table>
-    <tr><th style="width:120px">项目</th><th style="width:120px">报价</th><th style="width:120px">实付</th><th>说明</th></tr>
+    <tr><th>项目</th><th style="width:100px">报价</th><th style="width:100px">实付</th><th>说明</th></tr>
     <tr><td>抖音</td><td>¥25,500</td><td>¥17,000</td><td>含赠送：三端同步¥6,000+摄影¥500+策划¥2,000</td></tr>
     <tr><td>小红书</td><td>¥56,500</td><td>¥30,000</td><td>含赠送：三端同步¥24,000+摄影¥500+策划¥2,000</td></tr>
-    <tr><td>大众点评笔记营销</td><td>¥43,000</td><td>¥40,000</td><td>含赠送：官号露出¥1,000+热点策划¥1,000+社群宣发¥1,000</td></tr>
-    <tr><td>商户通</td><td>¥2,880</td><td>¥2,880</td><td>基础装修+团购上线</td></tr>
-    <tr><td>首席品鉴官·周小栀</td><td>¥32,920</td><td>¥32,920</td><td>定制杭州首店宣传片，含差旅个税</td></tr>
-    <tr><td>运营机动</td><td>¥7,200</td><td>¥7,200</td><td>灵活调配</td></tr>
+    <tr><td>大众点评笔记营销</td><td>¥43,000</td><td>¥40,000</td><td>含赠送：官号+热点+社群 ¥3,000</td></tr>
+    <tr><td>商户通</td><td>¥2,880</td><td>¥2,880</td><td></td></tr>
+    <tr><td>首席品鉴官·周小栀</td><td>¥32,920</td><td>¥32,920</td><td>含差旅个税</td></tr>
+    <tr><td>运营机动</td><td>¥7,200</td><td>¥7,200</td><td></td></tr>
     <tr class="hl"><td colspan="2" style="text-align:right"><strong>合计</strong></td><td><strong>¥130,000</strong></td><td>报价价值 ¥168,000</td></tr>
   </table>
 </div>
 
+<!-- ==================== 七、首席品鉴官 ==================== -->
+<div class="divider">━━━ 七、首席品鉴官 · 周小栀 ━━━</div>
+
 <div class="section">
-  <h2><span class="num">3</span>首席品鉴官 · 周小栀</h2>
+  <h2>周小栀 ｜ 全网1000万粉 · 定制杭州首店宣传片</h2>
   <table>
     <tr><td style="width:120px;font-weight:600">账号</td><td>周小栀 | ID: 00nuomi</td></tr>
     <tr><td style="font-weight:600">抖音粉丝</td><td><strong>143万</strong> | 赞藏 1,140万</td></tr>
@@ -386,21 +369,22 @@
   </div>
 </div>
 
+<!-- ==================== 八、执行时间线 ==================== -->
+<div class="divider">━━━ 八、执行时间线 ━━━</div>
+
 <div class="section">
-  <h2><span class="num">4</span>执行时间线</h2>
   <div class="tl">
     <div class="tl-item hoarding"><div class="d">D-30 · 围挡上画</div><div class="c">围挡安装完成，「拍围挡领山茶」启动。第一批40条千粉笔记开始发布。</div></div>
     <div class="tl-item hoarding"><div class="d">D-21 · 一点万象对接</div><div class="c">联系万象汇招商提交买一送一方案+banner申请。</div></div>
     <div class="tl-item"><div class="d">D-14 · 饮品笔记启动</div><div class="c">第二批饮品40条(千粉/万粉)开始发布。抖音云剪+达人探店启动。商户通+团购上线。</div></div>
-    <div class="tl-item"><div class="d">D-7 · 周小栀拍摄+集中爆发</div><div class="c">周小栀到店拍摄宣传片。大众点评30条点星笔记+12项营销上线。问答预埋。</div></div>
-    <div class="tl-item"><div class="d" style="color:var(--red);font-size:14px">★ D-Day · 开业</div><div class="c"><strong>三端同步：</strong>①买一送一(一点万象+抖音+美团)上线 ②免费菜+收藏送礼上线 ③颜值40条开始发布 ④周小栀宣传片全平台发布</div></div>
-    <div class="tl-item"><div class="d">D+7 · 买一送一结束</div><div class="c">买一送一活动收官。首周评价数+星级复盘。</div></div>
+    <div class="tl-item"><div class="d">D-7 · 周小栀拍摄+集中爆发</div><div class="c">周小栀到店拍摄宣传片。大众点评30条点星笔记+12项营销上线。</div></div>
+    <div class="tl-item"><div class="d" style="color:var(--red);font-size:14px">★ D-Day · 开业</div><div class="c"><strong>三端同步：</strong>①买一送一上线 ②免费菜+收藏送礼上线 ③颜值40条发布 ④周小栀宣传片全平台发布</div></div>
+    <div class="tl-item"><div class="d">D+7 · 买一送一结束</div><div class="c">买一送一收官。首周评价数+星级复盘。</div></div>
     <div class="tl-item"><div class="d">D+30 · 月度复盘</div><div class="c">120条笔记进度检查。曝光/转化/评价数据对比。</div></div>
     <div class="tl-item"><div class="d">D+45 · 免费菜收官</div><div class="c">打卡兑换活动第一期结束。评估二期投放。</div></div>
     <div class="tl-item"><div class="d">D+90 · 季度复盘</div><div class="c">评估品牌建设效果。省代决定二期投放及企微私域启动。</div></div>
   </div>
 </div>
-</div><!-- /tab-budget -->
 
 <div style="text-align:center;padding:40px 20px;color:#999;font-size:13px">
   <p>既山海 · 萧山万象汇店 | 开业整合营销全案</p>
@@ -409,15 +393,7 @@
 
 </div><!-- /container -->
 <script>
-function switchTab(evt, tabId) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
-  evt.target.classList.add('active');
-  var el = document.getElementById(tabId);
-  el.classList.remove('hidden');
-}
-// Watermark
-(function(){var w=document.getElementById('wm');var t='成都弯道超车传媒';var r=8,c=6;for(var i=0;i<r;i++){for(var j=0;j<c;j++){var s=document.createElement('span');s.textContent=t;s.style.top=(i*20)+'%';s.style.left=(j*18-5)+'%';w.appendChild(s);}}})();
+(function(){var w=document.getElementById('wm');var t='成都弯道超车传媒';var r=8,c=6;for(var i=0;i<r;i++){for(var j=0;j<c;j++){var s=document.createElement('span');s.textContent=t;s.style.top=(i*20)+'%';s.style.left=(j*18-5)+'%';w.appendChild(s);}})();
 </script>
 </body>
 </html>
