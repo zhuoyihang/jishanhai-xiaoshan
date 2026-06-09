@@ -19,8 +19,8 @@
   .tab-btn { flex:1; min-width:80px; padding:14px 4px; border:none; background:#fff; cursor:pointer; font-size:12px; font-weight:600; color:#888; border-bottom:3px solid transparent; transition:all .2s; text-align:center; border-radius:8px 8px 0 0; margin:0 1px; }
   .tab-btn:hover { color:var(--blue); background:#f0f4f8; }
   .tab-btn.active { color:var(--blue); border-bottom-color:var(--blue); background:#fff; }
-  .tab-content { display:none; }
-  .tab-content.active { display:block; }
+  .tab-content { display:block; }
+  .tab-content.hidden { display:none; }
   .cover { background:linear-gradient(135deg,#1a1a2e 0%,#2d3748 50%,#1a3a2a 100%); color:#fff; text-align:center; padding:50px 30px; border-radius:12px; margin-bottom:24px; }
   .cover h1 { font-size:30px; font-weight:700; letter-spacing:3px; }
   .cover .sub { font-size:15px; color:rgba(255,255,255,.7); margin-top:6px; }
@@ -86,7 +86,7 @@
 
 <div class="cover">
   <h1>既山海 · 萧山万象汇店</h1>
-  <div class="sub">开业整合营销全案 · 围挡启动 + 素人分层铺量 + 一点万象联动</div>
+  <div class="sub">开业整合营销全案 · 围挡启动 + 素人分层铺量 + 大众点评12项营销 + 一点万象联动</div>
   <div class="badge-row">
     <span class="c-badge">围挡预热期</span>
     <span class="c-badge">小红书120条素人SEO</span>
@@ -117,6 +117,7 @@
     <tr><td style="font-weight:600">小红书策略</td><td>120条素人分层铺量（围挡40千粉 + 饮品40千粉/万粉 + 颜值40千粉/万粉），SEO搜索占位，不投流</td></tr>
     <tr><td style="font-weight:600">预热期</td><td>围挡营销——门店装修期围挡=品牌首秀，「拍围挡发小红书@官方→开业免费领醒山时茶」</td></tr>
     <tr><td style="font-weight:600">商场联动</td><td>一点万象小程序——华润体系万象汇自有平台</td></tr>
+    <tr><td style="font-weight:600">首席品鉴官</td><td><strong>周小栀（全网1000万粉）</strong>——定制杭州首店宣传片，电影级画面质感，曾合作携程/人民日报/多地文旅</td></tr>
     <tr><td style="font-weight:600">跨平台促销</td><td>买一送一——一点万象+抖音+美团三端同步，开业首周7天</td></tr>
     <tr><td style="font-weight:600">免费菜活动</td><td>打卡兑换醒山时茶(300份/日限10杯) + 收藏送礼(LV1-5冰箱贴/V6-8签字笔)，第一期45天</td></tr>
   </table>
@@ -142,7 +143,7 @@
 </div><!-- /tab-all -->
 
 <!-- ===== TAB: HOARDING ===== -->
-<div id="tab-hoarding" class="tab-content">
+<div id="tab-hoarding" class="tab-content hidden">
 <div class="section">
   <h2><span class="num">1</span>围挡营销总览</h2>
   <div class="alert alert-p"><strong>核心逻辑：</strong>万象汇L1层步行街门店围挡期（装修期间）是品牌的「被动曝光黄金期」——每天成百上千人路过。把围挡从施工遮蔽物变成品牌首秀阵地，用「免费喝茶」钩子把路人转化为小红书发布者。</div>
@@ -176,7 +177,7 @@
 </div><!-- /tab-hoarding -->
 
 <!-- ===== TAB: XHS ===== -->
-<div id="tab-xhs" class="tab-content">
+<div id="tab-xhs" class="tab-content hidden">
 <div class="section">
   <h2><span class="num">1</span>小红书总策略——SEO搜索占位</h2>
   <div class="alert alert-p"><strong>策略：</strong>杭州首店，品牌0认知。120条素人笔记分三层铺量，不做内容放大，做<strong>搜索密度</strong>。当杭州消费者搜索「万象汇奶茶」「萧山新店」「杭州茶饮推荐」时，既山海的名字反复出现。</div>
@@ -207,7 +208,7 @@
 </div><!-- /tab-xhs -->
 
 <!-- ===== TAB: PLATFORM ===== -->
-<div id="tab-platform" class="tab-content">
+<div id="tab-platform" class="tab-content hidden">
 <div class="section">
   <h2><span class="num">1</span>抖音执行方案（¥17,000）</h2>
   <table>
@@ -264,7 +265,7 @@
 </div><!-- /tab-platform -->
 
 <!-- ===== TAB: FREE ===== -->
-<div id="tab-free" class="tab-content">
+<div id="tab-free" class="tab-content hidden">
 <div class="section">
   <h2><span class="num">1</span>免费菜活动（独立成本项）</h2>
   <table>
@@ -292,7 +293,7 @@
 </div><!-- /tab-free -->
 
 <!-- ===== TAB: BUDGET ===== -->
-<div id="tab-budget" class="tab-content">
+<div id="tab-budget" class="tab-content hidden">
 <div class="section">
   <h2><span class="num">1</span>营销预算总表（¥130,000）</h2>
 
@@ -375,7 +376,9 @@
     <tr><td style="font-weight:600">费用</td><td><strong>¥32,920</strong>（含机票住宿等差旅及个税，无额外费用）</td></tr>
   </table>
   <div style="margin-top:12px">
-    <p style="font-weight:600;color:var(--blue)">个人荣誉：</p>
+    <p style="font-weight:600;color:var(--blue)">品牌合作案例：</p>
+    <p style="font-size:12px;color:#555">周小栀曾与多个文旅品牌、地方政府及商业地产合作，产出高质感宣传片：携程×海南夏日郊游记、四川澳门周特邀嘉宾、成都温江美食节推荐官、贵州铜仁石阡文旅推荐官等。其作品以电影级画面质感+真实体验叙事著称，与既山海「东方山野茶」的自然质感高度契合。</p>
+    <p style="font-weight:600;color:var(--blue);margin-top:8px">个人荣誉：</p>
     <p style="font-size:12px;color:#555">红星新闻网签约大V · 抖音巨量星图优质旅行博主 · 携程签约旅行家 · "四川扶贫"公益品牌商标推广大使 · 贵州铜仁石阡文旅推荐官 · "成渝双城双享生活节"推荐官 · 金川旅游推荐官 · 携程×海南夏日郊游记推荐官 · "巴中南江康养旅游文化节"活动助力大使 · "成都市温江首届美食蝶变行动"推荐官 · 泰国"清迈旅游"推荐官 · 公益品牌"守护花蕾计划"花蕾使者 · 成都锦城学院新媒体研究所特聘研究员 · 洋葱大学金牌讲师 · 瘾食学院金牌讲师 · 《人民日报》×巴中南江人民政府"四川省第十一届乡村文化旅游节"特邀嘉宾 · 中国澳门×成都"四川·成都澳门周"特邀嘉宾 · "美荔广东12221品牌行动"特邀嘉宾</p>
   </div>
 </div>
@@ -405,11 +408,10 @@
 <script>
 function switchTab(evt, tabId) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => { t.classList.remove('active'); t.style.display = 'none'; });
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
   evt.target.classList.add('active');
   var el = document.getElementById(tabId);
-  el.classList.add('active');
-  el.style.display = 'block';
+  el.classList.remove('hidden');
 }
 // Watermark
 (function(){var w=document.getElementById('wm');var t='成都弯道超车传媒';var r=8,c=6;for(var i=0;i<r;i++){for(var j=0;j<c;j++){var s=document.createElement('span');s.textContent=t;s.style.top=(i*20)+'%';s.style.left=(j*18-5)+'%';w.appendChild(s);}}})();
