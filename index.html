@@ -298,13 +298,13 @@
 
   <h3 style="color:#E65100">一、抖音 ¥17,000</h3>
   <table>
-    <tr><th>项目</th><th style="width:100px">实付价</th><th style="width:100px">原价</th><th>说明</th></tr>
-    <tr><td>云剪内容（200条）</td><td>¥7,000</td><td>—</td><td>不同步三平台，纯抖音侧铺量</td></tr>
-    <tr><td>达人探店+内容制作</td><td>¥10,000</td><td>—</td><td>30个同城探店达人+基础内容</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 达人笔记同步三平台</td><td>¥0</td><td>¥200/篇</td><td>赠送项：30篇×200=¥6,000价值</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 博主无水印摄影照片</td><td>¥0</td><td>¥500/套</td><td>赠送项：品牌素材留存</td></tr>
-    <tr style="background:#E8F5E9"><td>[赠] 专业策划推广营销方案</td><td>¥0</td><td>¥2,000/次</td><td>赠送项：策略咨询</td></tr>
-    <tr class="hl"><td colspan="2" style="text-align:right"><strong>抖音合计（实付）</strong></td><td><strong>¥17,000</strong></td><td>赠送价值 ¥8,500</td></tr>
+    <tr><th>项目</th><th style="width:90px">实付价</th><th style="width:90px">原价</th><th>说明</th></tr>
+    <tr><td>云剪内容（200条）</td><td>¥7,000</td><td>—</td><td>不同步三平台</td></tr>
+    <tr><td>达人探店+内容制作</td><td>¥10,000</td><td>—</td><td>30个同城探店达人</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 达人笔记同步三平台</td><td>¥0</td><td>¥200/篇</td><td>30篇×200=¥6,000</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 博主无水印摄影照片</td><td>¥0</td><td>¥500/套</td><td>品牌素材留存</td></tr>
+    <tr style="background:#E8F5E9"><td>[赠] 专业策划推广营销方案</td><td>¥0</td><td>¥2,000/次</td><td>策略咨询</td></tr>
+    <tr class="hl"><td colspan="2" style="text-align:right"><strong>抖音合计（实付）</strong></td><td><strong>¥17,000</strong></td><td>赠送 ¥8,500</td></tr>
   </table>
 
   <h3 style="color:var(--purple);margin-top:24px">二、小红书 ¥30,000</h3>
@@ -405,9 +405,11 @@
 <script>
 function switchTab(evt, tabId) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => { t.classList.remove('active'); t.style.display = 'none'; });
   evt.target.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
+  var el = document.getElementById(tabId);
+  el.classList.add('active');
+  el.style.display = 'block';
 }
 // Watermark
 (function(){var w=document.getElementById('wm');var t='成都弯道超车传媒';var r=8,c=6;for(var i=0;i<r;i++){for(var j=0;j<c;j++){var s=document.createElement('span');s.textContent=t;s.style.top=(i*20)+'%';s.style.left=(j*18-5)+'%';w.appendChild(s);}}})();
